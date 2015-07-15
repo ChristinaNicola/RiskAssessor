@@ -5,6 +5,10 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAssessorLib", "RiskAssessorLib\RiskAssessorLib.csproj", "{8CB4425F-E1C8-46F3-BD9A-4820410AC5AB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAssessorData", "RiskAssessorData\RiskAssessorData.csproj", "{4687A5AC-9049-4A27-A28F-2EFD72361B03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RiskAssessorTest", "RiskAssessorTest\RiskAssessorTest.csproj", "{350DCE1F-F329-4FB7-8AF8-E3542FCCA3A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{8CB4425F-E1C8-46F3-BD9A-4820410AC5AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8CB4425F-E1C8-46F3-BD9A-4820410AC5AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8CB4425F-E1C8-46F3-BD9A-4820410AC5AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4687A5AC-9049-4A27-A28F-2EFD72361B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4687A5AC-9049-4A27-A28F-2EFD72361B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4687A5AC-9049-4A27-A28F-2EFD72361B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4687A5AC-9049-4A27-A28F-2EFD72361B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{350DCE1F-F329-4FB7-8AF8-E3542FCCA3A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{350DCE1F-F329-4FB7-8AF8-E3542FCCA3A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{350DCE1F-F329-4FB7-8AF8-E3542FCCA3A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{350DCE1F-F329-4FB7-8AF8-E3542FCCA3A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

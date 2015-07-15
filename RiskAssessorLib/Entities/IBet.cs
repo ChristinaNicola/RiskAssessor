@@ -8,7 +8,6 @@ namespace RiskAssessorLib.Entities
 {
     public interface IBet
     {
-        int BetId { get; }
         int ParticipantId { get; }
         int EventId { get; }
         int CustomerId { get; }
