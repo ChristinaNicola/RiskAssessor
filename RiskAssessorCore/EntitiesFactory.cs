@@ -3,7 +3,7 @@ using RiskAssessorLib.Entities;
 
 namespace RiskAssessorCore
 {
-    public static class BetsFactory
+    public static class EntitiesFactory
     {
         public static ISettledBet CreateSettledBet(int customerId, int eventId, int participantId, double stake, double amountWon)
         {

@@ -21,7 +21,7 @@ namespace RiskAssessorCore.Data
                 var values = line.Split(',');
                 
                 //will skip checking nulls, white spaces, whether the value is actually an int/double and array length to save some time 
-                settledBets.Add(BetsFactory.CreateSettledBet(
+                settledBets.Add(EntitiesFactory.CreateSettledBet(
                     customerId: int.Parse(values[0]), eventId: int.Parse(values[1]), participantId: int.Parse(values[2]),
                     stake: double.Parse(values[3]), amountWon: double.Parse(values[4])));
             }
@@ -44,7 +44,7 @@ namespace RiskAssessorCore.Data
                 var values = line.Split(',');
                 
                 //will skip checking nulls, white spaces, whether the value is actually an int/double and array length to save some time 
-                unsettledBets.Add(BetsFactory.CreateUnSettledBet(
+                unsettledBets.Add(EntitiesFactory.CreateUnSettledBet(
                     customerId: int.Parse(values[0]), eventId: int.Parse(values[1]), participantId: int.Parse(values[2]),
                     stake: double.Parse(values[3]), amountToWin: double.Parse(values[4])));
             }

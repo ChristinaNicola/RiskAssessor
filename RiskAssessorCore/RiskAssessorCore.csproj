@@ -39,8 +39,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BetsFactory.cs" />
-    <Compile Include="Data\BetsDataAdapter.cs" />
+    <Compile Include="EntitiesFactory.cs" />
+    <Compile Include="Data\RiskAssessorDataAdapter.cs" />
     <Compile Include="Data\BetsDataReader.cs" />
     <Compile Include="Entities\BetBase.cs" />
     <Compile Include="Entities\Customer.cs" />

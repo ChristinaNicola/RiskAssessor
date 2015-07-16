@@ -2,6 +2,7 @@
 using System.Linq;
 using RiskAssessorCore.Data;
 using RiskAssessorLib.Entities;
+using RiskAssessorLib.Logic;
 
 namespace RiskAssessorCore.Entities
 {
@@ -22,7 +23,7 @@ namespace RiskAssessorCore.Entities
             get
             {
                 if (_UnsettledBets == null)
-                    _UnsettledBets = BetsDataAdapter.GetInstance().AllUnsettledBets.Where(b => b.CustomerId == this.Id);
+                    _UnsettledBets = RiskAssessorDataAdapter.GetInstance().AllUnsettledBets.Where(b => b.CustomerId == this.Id);
                 return _UnsettledBets;
             }
         }
@@ -34,7 +35,7 @@ namespace RiskAssessorCore.Entities
             get
             {
                 if (_SettledBets == null)
-                    _SettledBets = BetsDataAdapter.GetInstance().AllSettledBets.Where(b => b.CustomerId == this.Id);
+                    _SettledBets = RiskAssessorDataAdapter.GetInstance().AllSettledBets.Where(b => b.CustomerId == this.Id);
                 return _SettledBets;
             }
         }
@@ -60,20 +61,6 @@ namespace RiskAssessorCore.Entities
                 if (_WinningPercentage == null)
                     _WinningPercentage = ((float)this.WinningBetsCount/(float)this.SettledBets.Count())*100;
                 return (float) _WinningPercentage;
-            }
-        }
-
-        private bool? _HasUnusualWinningOdds = null;
-
-        public bool HasUnusualWinningOdds
-        {
-            get
-            {
-                if (_HasUnusualWinningOdds == null)
-                {
-                    _HasUnusualWinningOdds = this.WinningPercentage > 60;
-                }
-                return (bool) _HasUnusualWinningOdds;
             }
         }
     }

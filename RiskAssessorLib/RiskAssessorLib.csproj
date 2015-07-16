@@ -43,6 +43,7 @@
     <Compile Include="Entities\ICustomer.cs" />
     <Compile Include="Entities\ISettledBet.cs" />
     <Compile Include="Entities\IUnsettledBet.cs" />
+    <Compile Include="Logic\RiskExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

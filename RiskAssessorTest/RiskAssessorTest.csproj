@@ -50,8 +50,11 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="BetsDataAdapterTest.cs" />
+    <Compile Include="MockEntities\FakeCustomer.cs" />
+    <Compile Include="RiskAssessorDataAdapterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RiskExtensionsTest.cs" />
+    <Compile Include="SettledBetTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\RiskAssessorCore\RiskAssessorCore.csproj">
@@ -63,6 +66,7 @@
       <Name>RiskAssessorLib</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

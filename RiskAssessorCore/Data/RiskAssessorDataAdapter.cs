@@ -5,15 +5,15 @@ using RiskAssessorLib.Entities;
 
 namespace RiskAssessorCore.Data
 {
-    public class BetsDataAdapter
+    public class RiskAssessorDataAdapter
     {
         //singleton
-        private  BetsDataAdapter()
+        private  RiskAssessorDataAdapter()
         { }
 
-        public static BetsDataAdapter GetInstance()
+        public static RiskAssessorDataAdapter GetInstance()
         {
-            return new BetsDataAdapter();
+            return new RiskAssessorDataAdapter();
         }
 
         private List<IUnsettledBet> _AllUnsettledBets = null;
@@ -55,7 +55,7 @@ namespace RiskAssessorCore.Data
 
                     if (customerIds != null && customerIds.Any())
                     {
-                        _AllCustomers = customerIds.Select(customerId => BetsFactory.CreateCustomer(customerId)).ToList();
+                        _AllCustomers = customerIds.Select(customerId => EntitiesFactory.CreateCustomer(customerId)).ToList();
                     }
                 }
 

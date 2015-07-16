@@ -79,7 +79,7 @@ namespace RiskAssessorUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 487);
+            this.ClientSize = new System.Drawing.Size(411, 173);
             this.Controls.Add(this.labelUnusualWinnings);
             this.Controls.Add(this.labelSelectCustomer);
             this.Controls.Add(this.comboBoxCustomer);
