@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RiskAssessorLib.Entities
 {
-    public interface IUnsettledBet
+    public interface IUnsettledBet: IBet
     {
         double AmountToWin { get; }
     }

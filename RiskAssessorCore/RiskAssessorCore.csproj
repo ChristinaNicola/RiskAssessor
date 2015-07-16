@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8CB4425F-E1C8-46F3-BD9A-4820410AC5AB}</ProjectGuid>
+    <ProjectGuid>{692F2BFD-A43F-484A-8A3A-59BD7B0095DA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RiskAssessorLib</RootNamespace>
-    <AssemblyName>RiskAssessorLib</AssemblyName>
+    <RootNamespace>RiskAssessorLogic</RootNamespace>
+    <AssemblyName>RiskAssessorLogic</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,11 +39,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\IBet.cs" />
-    <Compile Include="Entities\ICustomer.cs" />
-    <Compile Include="Entities\ISettledBet.cs" />
-    <Compile Include="Entities\IUnsettledBet.cs" />
+    <Compile Include="BetsFactory.cs" />
+    <Compile Include="Data\BetsDataAdapter.cs" />
+    <Compile Include="Data\BetsDataReader.cs" />
+    <Compile Include="Entities\BetBase.cs" />
+    <Compile Include="Entities\Customer.cs" />
+    <Compile Include="Entities\SettledBet.cs" />
+    <Compile Include="Entities\UnsettledBet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RiskAssessorLib\RiskAssessorLib.csproj">
+      <Project>{8cb4425f-e1c8-46f3-bd9a-4820410ac5ab}</Project>
+      <Name>RiskAssessorLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

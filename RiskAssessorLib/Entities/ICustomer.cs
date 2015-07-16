@@ -9,5 +9,6 @@ namespace RiskAssessorLib.Entities
     public interface ICustomer
     {
         int Id { get; }
+        bool HasUnusualWinningOdds { get; }
     }
 }

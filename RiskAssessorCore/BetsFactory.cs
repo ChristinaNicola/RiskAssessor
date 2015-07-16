@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using RiskAssessorCore.Entities;
 using RiskAssessorLib.Entities;
 
-namespace RiskAssessorLib
+namespace RiskAssessorCore
 {
     public static class BetsFactory
     {

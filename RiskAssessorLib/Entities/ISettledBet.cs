@@ -9,5 +9,6 @@ namespace RiskAssessorLib.Entities
     public interface ISettledBet: IBet
     {
         double AmountWon { get; }
+        bool IsAWinningBet { get; }
     }
 }

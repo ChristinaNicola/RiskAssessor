@@ -50,13 +50,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DataManagerTest.cs" />
+    <Compile Include="BetsDataAdapterTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RiskAssessorData\RiskAssessorData.csproj">
-      <Project>{4687A5AC-9049-4A27-A28F-2EFD72361B03}</Project>
-      <Name>RiskAssessorData</Name>
+    <ProjectReference Include="..\RiskAssessorCore\RiskAssessorCore.csproj">
+      <Project>{692f2bfd-a43f-484a-8a3a-59bd7b0095da}</Project>
+      <Name>RiskAssessorCore</Name>
     </ProjectReference>
     <ProjectReference Include="..\RiskAssessorLib\RiskAssessorLib.csproj">
       <Project>{8cb4425f-e1c8-46f3-bd9a-4820410ac5ab}</Project>

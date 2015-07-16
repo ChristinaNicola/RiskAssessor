@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RiskAssessorLib;
 using RiskAssessorLib.Entities;
 
 namespace RiskAssessorData
 {
-    public static class DataManager
+    internal static class BetsDataReader
     {
         public static List<ISettledBet> RetrieveSettledBetsData()
         {
