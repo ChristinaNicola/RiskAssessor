@@ -7,7 +7,13 @@ namespace RiskAssessorCore.Entities
 {
     internal class Customer : ICustomer
     {
-        public int Id { get; set; }
+        public Customer(int customerId)
+        {
+            _Id = customerId;
+        }
+
+        private int _Id;
+        public int Id { get { return _Id; } }
 
         private IEnumerable<IUnsettledBet> _UnsettledBets = null;
 

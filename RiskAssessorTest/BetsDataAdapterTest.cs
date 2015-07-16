@@ -17,5 +17,11 @@ namespace RiskAssessorTest
         {
             Assert.AreEqual(22, BetsDataAdapter.GetInstance().AllUnsettledBets.Count);
         }
+
+        [TestMethod]
+        public void AllCustomers_RetrievesAllRecords()
+        {
+            Assert.AreEqual(6, BetsDataAdapter.GetInstance().AllCustomers.Count);
+        }
     }
 }

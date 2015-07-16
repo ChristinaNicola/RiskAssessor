@@ -27,6 +27,12 @@ namespace RiskAssessorCore
                 Stake = stake,
                 AmountToWin = amountToWin
             };
-        } 
+        }
+
+        public static ICustomer CreateCustomer(int customerId)
+        {
+            return new Customer(customerId);
+        }
+
     }
 }

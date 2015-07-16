@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using RiskAssessorLib.Entities;
 
 namespace RiskAssessorCore.Data
@@ -37,5 +39,25 @@ namespace RiskAssessorCore.Data
                 return _AllSettledBets;
             }
         }
+
+        public List<ICustomer> AllCustomers
+        {
+            get
+            {
+                IEnumerable<int> customerIds =
+                    AllSettledBets.Select(b => b.CustomerId)
+                        .Union(AllUnsettledBets.Select(b => b.CustomerId))
+                        .Distinct();
+
+                List<ICustomer> customers = null;
+                if (customerIds != null && customerIds.Any())
+                {
+                    customers = customerIds.Select(customerId => BetsFactory.CreateCustomer(customerId)).ToList();
+                }
+
+                return customers;
+            }
+        }
+
     }
 }
