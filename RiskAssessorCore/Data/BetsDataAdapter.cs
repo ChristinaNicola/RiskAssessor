@@ -40,22 +40,26 @@ namespace RiskAssessorCore.Data
             }
         }
 
+        private List<ICustomer> _AllCustomers = null;
+        
         public List<ICustomer> AllCustomers
         {
             get
             {
-                IEnumerable<int> customerIds =
-                    AllSettledBets.Select(b => b.CustomerId)
-                        .Union(AllUnsettledBets.Select(b => b.CustomerId))
-                        .Distinct();
-
-                List<ICustomer> customers = null;
-                if (customerIds != null && customerIds.Any())
+                if (_AllCustomers == null)
                 {
-                    customers = customerIds.Select(customerId => BetsFactory.CreateCustomer(customerId)).ToList();
+                    IEnumerable<int> customerIds =
+                        AllSettledBets.Select(b => b.CustomerId)
+                            .Union(AllUnsettledBets.Select(b => b.CustomerId))
+                            .Distinct();
+
+                    if (customerIds != null && customerIds.Any())
+                    {
+                        _AllCustomers = customerIds.Select(customerId => BetsFactory.CreateCustomer(customerId)).ToList();
+                    }
                 }
 
-                return customers;
+                return _AllCustomers;
             }
         }
 

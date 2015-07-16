@@ -58,8 +58,8 @@ namespace RiskAssessorCore.Entities
             get
             {
                 if (_WinningPercentage == null)
-                    _WinningPercentage = this.WinningBetsCount/this.SettledBets.Count()*100;
-                    return (float) _WinningPercentage;
+                    _WinningPercentage = ((float)this.WinningBetsCount/(float)this.SettledBets.Count())*100;
+                return (float) _WinningPercentage;
             }
         }
 
@@ -71,7 +71,7 @@ namespace RiskAssessorCore.Entities
             {
                 if (_HasUnusualWinningOdds == null)
                 {
-                    _HasUnusualWinningOdds = this.WinningBetsCount > 60;
+                    _HasUnusualWinningOdds = this.WinningPercentage > 60;
                 }
                 return (bool) _HasUnusualWinningOdds;
             }
